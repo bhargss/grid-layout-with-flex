@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout with flex</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            height: 400px;
+        }
+        
+        .container-one, .container-two {
+            display: flex;
+            flex: 1;
+            max-width: 400px;
+            gap: 40px;
+        }
+
+        .container-one {
+            flex-flow: row wrap;
+        }
+
+        .container-two {
+            flex-flow: column wrap;
+        }
+
+        .item {
+            background-color: blueviolet;
+        }
+
+        .item-one, .item-four {
+            flex: 1 1 150px;
+            height: 20%
+        }
+
+        .item-three {
+            flex: 1 1 400px;
+            height: 40%;
+        }
+
+        .item-two, .item-five {
+            flex: 1 1 50px;
+            height: 20%;
+        }
+    
+        .item-six, .item-seven, .item-eight, .item-nine {
+            flex: 1;
+        }
+
+        .item-six {
+            flex-basis: 70%;
+        }
+
+        .item-seven {
+            flex-basis: 20%
+        }
+
+        .item-eight {
+            flex-basis: 20%;
+        }
+
+        .item-nine {
+            flex-basis: 60%;
+        }
+
+    /* Achieved the layout I wanted but container-one can change layout when wrapped */
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container-one">
+            <div class="item item-one"></div>
+            <div class="item item-two"></div>
+            <div class="item item-three"></div>
+            <div class="item item-four"></div>
+            <div class="item item-five"></div>
+        </div>
+
+        <div class="container-two">
+            <div class="item item-six"></div>
+            <div class="item item-seven"></div>
+            <div class="item item-eight"></div>
+            <div class="item item-nine"></div>
+        </div>
+    </div>
+</body>
+</html>
